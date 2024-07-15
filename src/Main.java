@@ -78,7 +78,6 @@ public class Main {
         String[] text = TEXT_SAMPLE.toLowerCase().split(" ");
         List<Node> currentNodes = new ArrayList<>();
         currentNodes.add(new Node(WORD_BEGINNING, 1.0));
-        int count = 0;
 
         for (String phrase : text) {
             List<Node> next = new ArrayList<>();
@@ -94,12 +93,10 @@ public class Main {
                     node.getNext().add(newNode);
                     newNode.getPrevious().add(node);
                     next.add(newNode);
-                    count++;
                 }
             }
             currentNodes = next;
         }
-        System.out.println(count);
 
         // 結果を表示
         Stack<Node> best = new Stack<>();
