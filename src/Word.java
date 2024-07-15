@@ -18,11 +18,11 @@ public class Word {
         return other.word.equals(this.word) && other.category.equals(this.category);
     }
 
-    public String word() {
+    public String getWord() {
         return word;
     }
 
-    public LexicalCategory category() {
+    public LexicalCategory getCategory() {
         return category;
     }
 
@@ -33,6 +33,6 @@ public class Word {
 
     @Override
     public String toString() {
-        return word + " / " + category.name();
+        return word + " / " + category.getName();
     }
 }

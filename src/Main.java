@@ -83,11 +83,11 @@ public class Main {
         for (String phrase : text) {
             List<Node> next = new ArrayList<>();
             for (Word word : dictionary) {
-                if (!word.word().equals(phrase)) {
+                if (!word.getWord().equals(phrase)) {
                     continue;
                 }
                 for (Node node : currentNodes) {
-                    LexicalCategoryBiGram biGram = new LexicalCategoryBiGram(node.getWord().category(), word.category());
+                    LexicalCategoryBiGram biGram = new LexicalCategoryBiGram(node.getWord().getCategory(), word.getCategory());
                     double transitionProbability = probBiGramTransition.getOrDefault(biGram, 0.0);
                     double wordProbability = probWordOutput.get(word);
                     Node newNode = new Node(word, node.getMaxProbability() * transitionProbability * wordProbability);

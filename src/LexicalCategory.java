@@ -16,7 +16,7 @@ public class LexicalCategory {
         return name.equals(other.name);
     }
 
-    public String name() {
+    public String getName() {
         return name;
     }
 

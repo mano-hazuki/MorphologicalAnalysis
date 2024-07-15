@@ -15,14 +15,14 @@ public class LexicalCategoryBiGram {
         if (!(obj instanceof LexicalCategoryBiGram other)) {
             return false;
         }
-        return category0().equals(other.category0()) && category1().equals(other.category1());
+        return getCategory0().equals(other.getCategory0()) && getCategory1().equals(other.getCategory1());
     }
 
-    public LexicalCategory category0() {
+    public LexicalCategory getCategory0() {
         return category0;
     }
 
-    public LexicalCategory category1() {
+    public LexicalCategory getCategory1() {
         return category1;
     }
 
